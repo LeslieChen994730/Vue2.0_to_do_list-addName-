@@ -5,7 +5,7 @@
     <h1 v-html="msg"></h1>
     <input  type="text" v-model="itemNew" v-on:keyup.enter="addNew"/>
     <ul>
-    	<li v-for="item in items" v-bind:class="{isStudent:item.student}" v-on:click="turnRed(item)">
+    	<li v-for="item in items" :key="item.index" v-bind:class="{isStudent:item.student}" v-on:click="turnRed(item)">
     		{{item.name}}
     	</li>
     </ul>
